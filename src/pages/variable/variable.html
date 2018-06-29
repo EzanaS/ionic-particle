@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Variables</ion-title>
+    <ion-title>Current temperature</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -30,15 +30,15 @@
       <div *ngIf="subscribed">
         <h3>Device variables</h3>
         <!--
-            Finally, we can display the variable var1, which is defined in variable.ts
+            Finally, we can display the variable Fahrenheit, which is defined in variable.ts
         -->
-        <p>
-        The device variable "var1" is periodically polled, and the current value is {{var1}} 
+        <p text-center>
+        The current temperature is {{Fahrenheit}} Fahrenheit
         </p>
       </div>
       <!-- "If we were unable to poll the variable, display an error message -->
       <div *ngIf="!subscribed">
-            The device is offline or "var1" is unavailable.
+            The device is offline or "Fahrenheit" is unavailable.
       </div>
   </div>
 

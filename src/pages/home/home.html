@@ -7,18 +7,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding> 
+<ion-content padding>
   <div *ngIf="!particle.token">
       Please login and select a device. <br />
       <button ion-button (click)="login()">Login</button>
   </div>
   <div *ngIf="particle.token && particle.device">
-      <h5> Joon Yee's Awesome Device App Thingy </h5>
+      <h5> Athletic Gear </h5>
       <p>
-        This app demonstrates how to access a Particle.io device to display its state, read events, and call functions.
-      </p>
+        This app informs the user about the temperature in the environment their in.
       <!-- You can display different device states by checking particle.device -->
       <p *ngIf="!particle.device || !particle.device.connected">{{particle.device.name}} is offline</p>
-      <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>
+    
  </div>
 </ion-content>
